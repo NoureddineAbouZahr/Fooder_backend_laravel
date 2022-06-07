@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class create_reviews extends Migration
+class CreateRestaurants extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class create_reviews extends Migration
      */
     public function up()
     {
-        Schema::create('reviews', function (Blueprint $table) {
+        Schema::create('restaurants', function (Blueprint $table) {
             $table->id();
-            $table->string('Feedback')->nullable();
-            $table->string('user_id');  
-            $table->string('resto_id');  
-            $table->string('rate');  
-              });
+            $table->string('name');
+            $table->string('Desrcription');
+        });
     }
 
     /**
@@ -29,6 +27,6 @@ class create_reviews extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('password_resets');
+        Schema::dropIfExists('restaurants');
     }
 }
