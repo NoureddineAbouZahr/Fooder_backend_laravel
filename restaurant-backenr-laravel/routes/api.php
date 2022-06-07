@@ -18,6 +18,8 @@ use App\Http\Controllers\user_controller;
 */
 
 Route::get('/restaurants', [Restaurant_controller::class, 'getAllRestaurants']);
-Route::get('/usersl', [Login::class, 'login']);
+Route::post('/addr', [Restaurant_controller::class, 'addResto']);
+Route::post('/usersl', [user_controller::class, 'login']);
+Route::post('/register', [user_controller::class, 'signup']);
 
 

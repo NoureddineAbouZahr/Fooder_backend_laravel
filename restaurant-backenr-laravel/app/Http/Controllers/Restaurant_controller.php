@@ -22,9 +22,10 @@ class Restaurant_controller extends Controller
 
     }
     public function addResto(Request $request){
-        $resto = new Restaurant;
+        $resto = new restaurant;
         $resto->R_Name = $request->R_Name;
-        $resto->Description = $request->Description;
+        $resto->Description = $request->Desc;
+        $resto->Img = $request->img;
         $resto->save();
         
         return response()->json([
