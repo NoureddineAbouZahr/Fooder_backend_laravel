@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePasswordResetsTable extends Migration
+class create_restaurants extends Migration
 {
     /**
      * Run the migrations.
@@ -16,9 +16,7 @@ class CreatePasswordResetsTable extends Migration
         Schema::create('restaurants', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('Desrcription');
-            $table->timestamp('created_at')->nullable();
-        });
+            $table->string('Desrcription');        });
     }
 
     /**
