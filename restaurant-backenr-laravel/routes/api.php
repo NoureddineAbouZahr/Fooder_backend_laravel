@@ -21,5 +21,6 @@ Route::get('/restaurants', [Restaurant_controller::class, 'getAllRestaurants']);
 Route::post('/addr', [Restaurant_controller::class, 'addResto']);
 Route::post('/register', [user_controller::class, 'signUp']);
 Route::post('/usersl', [user_controller::class, 'login']);
+Route::get('/usersList', [user_controller::class, 'getAllUsers']);
 
 
