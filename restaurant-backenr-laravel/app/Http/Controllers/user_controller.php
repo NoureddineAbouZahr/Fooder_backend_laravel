@@ -49,9 +49,19 @@ class user_controller extends Controller
         }
         return response()->json([
             "status" => "Success",
-            "restos" => $users
+            "users" => $users
         ], 200);
 
 
+    }
+    public function editProfile(Request $request){
+        $user=user::where('U_Id',$request->id)->update(['F_Name'=>$request->get('F_Name')]);
+        $user=user::where('U_Id',$request->id)->update( ['L_Name'=>$request->get('L_Name')]);
+                                                      
+                                              //->update(['L_Name'->$request->lname]);
+        
+        return response()->json([
+            "status"=>"Success"
+        ]);
     }
 }

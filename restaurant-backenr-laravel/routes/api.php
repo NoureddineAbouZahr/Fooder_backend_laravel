@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Restaurant_controller;
 use App\Http\Controllers\user_controller;
+use App\Http\Controllers\reviews_controller;
 
 
 /*
@@ -22,5 +23,7 @@ Route::post('/addr', [Restaurant_controller::class, 'addResto']);
 Route::post('/register', [user_controller::class, 'signUp']);
 Route::post('/usersl', [user_controller::class, 'login']);
 Route::get('/usersList', [user_controller::class, 'getAllUsers']);
+Route::post('/uprofile', [user_controller::class, 'editProfile']);
+Route::post('/addrev', [reviews_controller::class, 'addReview']);
 
 
