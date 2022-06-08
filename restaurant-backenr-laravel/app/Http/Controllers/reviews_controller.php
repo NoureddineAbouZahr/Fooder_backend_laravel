@@ -24,4 +24,12 @@ class reviews_controller extends Controller
             "status" => "Success"
         ], 200);}
     }
+    public function getRevById(Request $request){
+        $rev = review::where("Restaurant_R_Id","=",$request->rid)->get();
+        
+        return response()->json([
+            "status" => "Success",
+            "results" => $rev
+        ], 200);
+    }
 }

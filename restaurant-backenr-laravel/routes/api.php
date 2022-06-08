@@ -25,5 +25,6 @@ Route::post('/usersl', [user_controller::class, 'login']);
 Route::get('/usersList', [user_controller::class, 'getAllUsers']);
 Route::post('/uprofile', [user_controller::class, 'editProfile']);
 Route::post('/addrev', [reviews_controller::class, 'addReview']);
+Route::post('/getRev', [reviews_controller::class, 'getRevById']);
 
 
